@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:web_view_demo/web_view.dart';
+import 'package:web_view_demo/widget/custom_widget.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,8 +15,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   void initState() {
 
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(Duration(seconds: 3),() {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WebView(),));
+    Future.delayed(Duration(seconds: 5),() {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WebViewDemo(),));
     },);
     super.initState();
   }
@@ -29,15 +30,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          height: 100,
-          width: 100,
-          child: Text("Welcome"),
-          decoration: BoxDecoration(
-            color: Colors.white54,
-            borderRadius: BorderRadius.circular(20),
-          ),
-        ),
+        child: spinkit
       ),
     );
   }

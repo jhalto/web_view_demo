@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Center(
         child: MaterialButton(onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => WebView(),));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => WebViewDemo(),));
         },
           child: Text("web view"),
         ),
