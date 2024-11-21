@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           child: Text("Welcome"),
           decoration: BoxDecoration(
             color: Colors.white54,
-            borderRadius: BorderRadius.circular(20)
+            borderRadius: BorderRadius.circular(20),
           ),
         ),
       ),

@@ -15,16 +15,18 @@ final _webViewController = WebViewController()
   ..loadRequest(Uri.parse("https://w7ds.com/"));
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-      body: PopScope(
-        onPopInvoked: (value)async{
-          if(await _webViewController.canGoBack()){
-            await _webViewController.goBack();
-          }
-        },
-          canPop: true,
-          child: WebViewWidget(controller: _webViewController)
+    return SafeArea(
+      child: Scaffold(
+      
+        body: PopScope(
+          onPopInvoked: (value)async{
+            if(await _webViewController.canGoBack()){
+              await _webViewController.goBack();
+            }
+          },
+            canPop: true,
+            child: WebViewWidget(controller: _webViewController)
+        ),
       ),
     );
   }
