@@ -9,17 +9,23 @@ class WebView extends StatefulWidget {
 }
 
 class _WebViewState extends State<WebView> {
+final _webViewController = WebViewController()
 
-  final controller = WebViewController()
-  ..setJavaScriptMode(JavaScriptMode.disabled)
+  ..setJavaScriptMode(JavaScriptMode.unrestricted)
   ..loadRequest(Uri.parse("https://w7ds.com/"));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Web View"),
+
+      body: PopScope(
+        onPopInvoked: (value)async{
+          if(await _webViewController.canGoBack()){
+            await _webViewController.goBack();
+          }
+        },
+          canPop: true,
+          child: WebViewWidget(controller: _webViewController)
       ),
-      body: WebViewWidget(controller: controller),
     );
   }
 }
