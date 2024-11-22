@@ -38,6 +38,7 @@ dependencies:
   webview_flutter:
   flutter_spinkit:
   liquid_pull_to_refresh:
+  flutter_inappwebview: ^6.1.5
 
 dev_dependencies:
   flutter_test:

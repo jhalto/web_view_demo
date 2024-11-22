@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:web_view_demo/home.dart';
 import 'package:web_view_demo/web_view.dart';
 import 'package:web_view_demo/widget/custom_widget.dart';
 
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(Duration(seconds: 5),() {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WebViewDemo(),));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home(),));
     },);
     super.initState();
   }
