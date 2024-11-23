@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:web_view_demo/home.dart';
 import 'package:web_view_demo/splash_screen.dart';
-import 'package:web_view_demo/web_view.dart';
+
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
