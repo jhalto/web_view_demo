@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:web_view_demo/providers/wev_provider.dart';
+import 'package:web_view_demo/splash_screen.dart';
 
 import 'home.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(),
+      home: const SplashScreen(),
     );
   }
 }
