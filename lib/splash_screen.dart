@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   void initState() {
 
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(Duration(seconds: 2),() {
+    Future.delayed(Duration(seconds: 1),() {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home(),));
     },);
     super.initState();
@@ -31,7 +31,10 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: spinkit
+        child: CircleAvatar(
+          radius: 80,
+          backgroundImage: AssetImage("lib/images/w7d.jpeg"),
+        )
       ),
     );
   }

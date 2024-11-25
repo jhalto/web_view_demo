@@ -21,10 +21,10 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.jhalto.web_view_demo"
+        applicationId = "com.w7d.web_view_demo"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = 24
+        minSdk = 21
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -42,8 +42,3 @@ android {
 flutter {
     source = "../.."
 }
-//dependencies {
-//    // ...
-//    implementation("com.google.android.material:material:<version>")
-//    // ...
-//}
